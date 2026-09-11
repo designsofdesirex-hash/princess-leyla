@@ -1,0 +1,19 @@
+{
+  "name": "princess-leyla-official",
+  "version": "1.0.0",
+  "description": "Princess Leyla — Professional finprincess & certified simp collector",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "princess-leyla",
+    "editorial-web-design",
+    "femdom",
+    "luxury-portfolio"
+  ],
+  "author": "Princess Leyla",
+  "license": "UNLICENSED",
+  "private": true
+}
