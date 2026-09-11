@@ -24,21 +24,23 @@
     const exitBtn = getEl('[data-age-exit]', gate);
     const gatePanel = getEl('.age-gate__panel', gate);
     const gateImages = [
-      'assets/img/la_img_31.webp',
-      'assets/img/la_img_29.webp',
-      'assets/img/la_img_05.webp',
-      'assets/img/la_img_39.webp'
+      'la_img_31.webp',
+      'la_img_18.webp',
+      'la_img_39.webp',
+      'la_img_05.webp'
     ];
     let gateImageIndex = 0;
     const setGateImage = () => {
       if (!gatePanel) return;
-      gatePanel.style.setProperty('--age-gate-image', `url("${gateImages[gateImageIndex]}")`);
+      const file = gateImages[gateImageIndex];
+      gatePanel.style.setProperty('--age-gate-image', `url("../img/${file}")`);
+      gatePanel.style.backgroundImage = `linear-gradient(180deg, rgba(10, 10, 11, 0.12) 0%, rgba(10, 10, 11, 0.48) 40%, rgba(10, 10, 11, 0.92) 70%, rgba(10, 10, 11, 0.98) 100%), url("assets/img/${file}")`;
     };
     setGateImage();
     const gateImageTimer = window.setInterval(() => {
       gateImageIndex = (gateImageIndex + 1) % gateImages.length;
       setGateImage();
-    }, 5200);
+    }, 6000);
 
     const isVerified = () => {
       try {
